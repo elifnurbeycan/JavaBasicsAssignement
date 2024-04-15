@@ -1,0 +1,49 @@
+//1. örnek helloworld yazma
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+
+    }
+}
+//2. örnek basit hesap makinesi
+import java.util.Scanner;
+public class HesapMakinesi {
+    public static void main(String[] args) {
+        Scanner oku =new Scanner(System.in);
+        int num1,num2;
+        double sonuc=0;
+        String islem;
+        System.out.printf("1. sayiyi girin:");
+        num1=oku.nextInt();
+        System.out.printf("yapılacak islemi girin:");
+        islem=oku.next();
+        System.out.printf("2. sayiyi girin:");
+        num2=oku.nextInt();
+
+        switch (islem){
+            case "+": sonuc=num1+num2; System.out.println(sonuc); break;
+            case "-": sonuc=num1-num2; System.out.println(sonuc); break;
+            case "*": sonuc=num1*num2; System.out.println(sonuc); break;
+            case "/": sonuc=(float) num1/num2; System.out.println(sonuc); break;
+            default:
+                System.out.printf("hatalı islem girdiniz."); break;
+        }
+
+    }
+}
+//3. örnek girilen sayinin çift veya tek olduğunu anlamak
+import java.util.Scanner ;
+public class Main {
+    public static void main(String[] args) {
+        int num;
+        Scanner oku =new Scanner(System.in);
+        System.out.print("sayi giriniz:");
+        num=oku.nextInt();
+        if(num%2==0){
+            System.out.println("girdigin sayi cift!");
+        }
+        else {
+            System.out.println("girdigin sayi tek!");
+        }
+    }
+}
